@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Calculator</title>
+    <link rel="stylesheet" href="cal.css" />
+  </head>
+  <body>
+    <div class="calculator">
+    <div class="NAME">CASIO</div>
+      <input type="text" id="display" placeholder="0" readonly />
+      <br />
+
+      <div>
+        <button id="Operator" onclick="current_display=''; document.querySelector('#display').value = current_display;">AC</button>
+        <button id="Operator" onclick="current_display = current_display.slice(0, -1);  document.querySelector('#display').value = current_display;">DEL</button>
+        <button  id="Operator" onclick="current_display=current_display+'%'; document.querySelector('#display').value = current_display;">%</button>
+        <button  id="Operator" onclick="current_display=current_display+'/'; document.querySelector('#display').value = current_display;">/</button>
+      </div>
+      <div>
+        <button onclick="current_display=current_display+'7'; document.querySelector('#display').value = current_display;">7</button>
+        <button onclick="current_display=current_display+'8'; document.querySelector('#display').value = current_display;">8</button>
+        <button onclick="current_display=current_display+'9'; document.querySelector('#display').value = current_display;">9</button>
+        <button  id="Operator" onclick="current_display=current_display+'*'; document.querySelector('#display').value = current_display;">*</button>
+      </div>
+      <div>
+        <button onclick="current_display=current_display+'4'; document.querySelector('#display').value = current_display;">4</button>
+        <button onclick="current_display=current_display+'5'; document.querySelector('#display').value = current_display;">5</button>
+        <button onclick="current_display=current_display+'6'; document.querySelector('#display').value = current_display;">6</button>
+        <button  id="Operator" onclick="current_display=current_display+'-'; document.querySelector('#display').value = current_display;">-</button>
+      </div>
+      <div>
+        <button onclick="current_display=current_display+'3'; document.querySelector('#display').value = current_display;">3</button>
+        <button onclick="current_display=current_display+'2'; document.querySelector('#display').value = current_display;">2</button>
+        <button
+          onclick="current_display=current_display+'1'; document.querySelector('#display').value = current_display;"
+        >
+          1
+        </button>
+        <button  id="Operator" onclick="current_display=current_display+'+'; document.querySelector('#display').value = current_display;">+</button>
+      </div>
+      <div>
+        <button onclick="current_display=current_display+'00'; document.querySelector('#display').value = current_display;">00</button>
+        <button onclick="current_display=current_display+'0'; document.querySelector('#display').value = current_display;">0</button>
+        <button onclick="current_display=current_display+'.'; document.querySelector('#display').value = current_display;">.</button>
+        <button  id="Operator" onclick="
+        let result=eval(current_display);
+        current_display=result; document.querySelector('#display').value = current_display;">=</button>
+      </div>
+    </div>
+  </body>
+  <script src="cal.js"></script>
+</html>
